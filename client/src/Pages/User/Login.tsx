@@ -1,9 +1,9 @@
 import { Link } from "react-router";
 import "./Login.css";
 
-import mail_icon from "../assets/images/mail.png";
-import lock_icon from "../assets/images/lock.png";
-import event_img from "../assets/images/eventsBWimage.jpg";
+import mail_icon from "../../assets/images/mail.png";
+import lock_icon from "../../assets/images/lock.png";
+import event_img from "../../assets/images/eventsBWimage.jpg";
 
 export const Login = () => {
   return (

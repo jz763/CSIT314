@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import logo from "../Images/logo.png";
 import bookmark_icon from "../Images/bookmark-empty.png";
 import profile_pic from "../Images/Profile Pic.png";
@@ -14,19 +15,19 @@ export const Navbar = () => {
         bg-[#1d1c1c] border border-black
         box-border
         z-1000000
-        
       "
     >
-      {/* Logo on the left */}
-      <a href="/HomePage">
-        <div className="flex items-center border-r border-white pr-[20px] mr-[20px]">
-          <img
-            src={logo}
-            alt="Logo"
-            className="w-[200px] h-[110px] object-contain"
-          />
-        </div>
-      </a>
+      {/* Logo on the left (now a <Link> to “/”) */}
+      <Link
+        to="/HomePage"
+        className="flex items-center border-r border-white pr-[20px] mr-[20px]"
+      >
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-[200px] h-[110px] object-contain"
+        />
+      </Link>
 
       {/* Middle “left-group” area (search + About Us) */}
       <div
@@ -83,20 +84,20 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* “About Us” link */}
-        <a
-          href="/"
+        {/* “About Us” */}
+        <Link
+          to="/about"
           className="text-white text-[24px] font-normal hover:underline"
         >
           About Us
-        </a>
+        </Link>
       </div>
 
       {/* User & Bookmark on the right */}
       <div className="flex items-center justify-center">
-        <a href="/">
+        <Link to="/bookmarks">
           <img src={bookmark_icon} alt="Bookmark icon" />
-        </a>
+        </Link>
         <img src={profile_pic} alt="Profile picture" className="ml-[35px]" />
       </div>
     </header>

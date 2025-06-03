@@ -4,6 +4,7 @@ import { EventCards } from "../../assets/Components/EventCards";
 import Carousel from "react-multi-carousel";
 import { Footer } from "../../assets/Components/Footer";
 import "react-multi-carousel/lib/styles.css";
+import { Navbar } from "../../assets/Components/Navbar";
 
 import event_img from "../../assets/images/concertIMG.png";
 import "./HomePage.css";
@@ -18,7 +19,6 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="relative">
-   
       <Carousel
         className="relative top-27"
         responsive={responsive}
@@ -101,14 +101,50 @@ export const HomePage: React.FC = () => {
         <div
           className="
             w-[2000px]
-            h-[1000px]
+            h-[1250px]
             rounded-[20px]
             bg-[rgba(85,85,85,0.07)]
             shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25),_45.5px_-45.5px_45.5px_0px_rgba(64,64,64,0.07)_inset,_-45.5px_45.5px_45.5px_0px_rgba(255,255,255,0.07)_inset]
             backdrop-blur-[31.395000457763672px]
           "
         >
-          <div className="mt-8 w-[2000px] mx-auto">
+          <div className="mt-8 w-[2000px] mx-auto pt-[30px]">
+            <div className="text-[#FFF] text-[30px] font-bold pl-[359px] pb-[30px]">
+              Your Upcoming Events
+            </div>
+            <Carousel
+              responsive={responsive}
+              arrows
+              infinite
+              keyBoardControl
+              transitionDuration={500}
+            >
+              {/* Slide 1: three static EventCards */}
+              <div className="h-full flex items-center justify-center space-x-10 px-4">
+                <EventCards />
+                <EventCards />
+                <EventCards />
+              </div>
+
+              {/* Slide 2: three static EventCards */}
+              <div className="h-full flex items-center justify-center space-x-10 px-4">
+                <EventCards />
+                <EventCards />
+                <EventCards />
+              </div>
+
+              {/* Slide 3: three static EventCards */}
+              <div className="h-full flex items-center justify-center space-x-10 px-4">
+                <EventCards />
+                <EventCards />
+                <EventCards />
+              </div>
+            </Carousel>
+          </div>
+          <div className="mt-8 w-[2000px] mx-auto pt-[30px]">
+            <div className="text-[#FFF] text-[30px] font-bold pl-[359px] pb-[30px]">
+              Events Near You
+            </div>
             <Carousel
               responsive={responsive}
               arrows
@@ -140,7 +176,7 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
-
+      <Navbar />
       <Footer />
     </div>
   );
