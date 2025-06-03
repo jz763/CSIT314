@@ -1,11 +1,11 @@
 import React from "react";
-import { Genre } from "../assets/Components/Genre";
-import { EventCards } from "../assets/Components/EventCards";
+import { Genre } from "../../assets/Components/Genre";
+import { EventCards } from "../../assets/Components/EventCards";
 import Carousel from "react-multi-carousel";
-import { Footer } from "../assets/Components/Footer";
+import { Footer } from "../../assets/Components/Footer";
 import "react-multi-carousel/lib/styles.css";
 
-import event_img from "../assets/images/concertIMG.png";
+import event_img from "../../assets/images/concertIMG.png";
 import "./HomePage.css";
 
 export const HomePage: React.FC = () => {

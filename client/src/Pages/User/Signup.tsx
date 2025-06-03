@@ -1,9 +1,9 @@
 import { Link } from "react-router";
-import mail_icon from "../assets/images/mail.png";
-import lock_icon from "../assets/images/lock.png";
-import person_icon from "../assets/images/person-sharp.png";
-import contactadd_icon from "../assets/images/phone-add.png";
-import event_img from "../assets/images/eventsBWimage.jpg";
+import mail_icon from "../../assets/images/mail.png";
+import lock_icon from "../../assets/images/lock.png";
+import person_icon from "../../assets/images/person-sharp.png";
+import contactadd_icon from "../../assets/images/phone-add.png";
+import event_img from "../../assets/images/eventsBWimage.jpg";
 
 export const Signup = () => {
   return (
