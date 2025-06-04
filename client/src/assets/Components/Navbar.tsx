@@ -1,104 +1,48 @@
-import { Link } from "react-router";
 import logo from "../Images/logo.png";
+
 import bookmark_icon from "../Images/bookmark-empty.png";
 import profile_pic from "../Images/Profile Pic.png";
 import loc_icon from "../Images/location-sharp.png";
 import search_icon from "../Images/search.png";
+import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
   return (
-    <header
-      className="
-        fixed top-0 left-0 w-full h-[110px]
-        flex flex-nowrap items-center justify-between
-        p-[23px]
-        bg-[#1d1c1c] border border-black
-        box-border
-        z-1000000
-      "
-    >
-      {/* Logo on the left (now a <Link> to “/”) */}
-      <Link
-        to="/HomePage"
-        className="flex items-center border-r border-white pr-[20px] mr-[20px]"
-      >
-        <img
-          src={logo}
-          alt="Logo"
-          className="w-[200px] h-[110px] object-contain"
-        />
-      </Link>
-
-      {/* Middle “left-group” area (search + About Us) */}
-      <div
-        className="
-          fixed ml-[272px]
-          flex items-center gap-[30px] flex-shrink-0
-        "
-      >
-        {/* Search box container */}
-        <div
-          className="
-            flex items-center justify-start
-            w-[482px] h-[42px]
-            rounded-[20px] bg-white
-            flex-shrink-0
-          "
-        >
-          {/* “Search Events” field */}
-          <div className="relative flex items-center pr-[50px] h-[20px] w-[235px] border-r-2 border-black">
+    <header className={styles["header"]}>
+      <a href="/">
+        <div className={styles["logo-wrapper"]}>
+          <img className={styles["logo"]} src={logo} alt="" />
+        </div>
+      </a>
+      <div className={styles["left-group"]}>
+        <div className={styles["search"]}>
+          <div className={styles["search-events"]}>
             <input
+              className={styles["input"]}
               type="text"
               placeholder="Search Events"
-              className="
-                border-none bg-transparent
-                pl-[10px] h-[90px]
-                outline-none text-[#1d1c1c]
-                placeholder:text-[15px]
-              "
             />
-            <img
-              src={search_icon}
-              alt="Search icon"
-              className="absolute ml-[200px]"
-            />
+            <img src={search_icon} />
           </div>
-
-          {/* “Location” field */}
-          <div className="relative flex items-center ml-0">
+          <div className={styles["location"]}>
             <input
+              className={styles["input"]}
               type="text"
               placeholder="Location"
-              className="
-                border-none bg-transparent
-                ml-[10px] h-[90px]
-                outline-none text-[#1d1c1c]
-                placeholder:text-[15px]
-              "
             />
-            <img
-              src={loc_icon}
-              alt="Location icon"
-              className="absolute ml-[210px]"
-            />
+            <img src={loc_icon} />
           </div>
         </div>
-
-        {/* “About Us” */}
-        <Link
-          to="/about"
-          className="text-white text-[24px] font-normal hover:underline"
-        >
+        <a className={styles["aboutUs"]} href="/">
           About Us
-        </Link>
+        </a>
       </div>
 
-      {/* User & Bookmark on the right */}
-      <div className="flex items-center justify-center">
-        <Link to="/bookmarks">
-          <img src={bookmark_icon} alt="Bookmark icon" />
-        </Link>
-        <img src={profile_pic} alt="Profile picture" className="ml-[35px]" />
+      <div className={styles["user_bookmark"]}>
+        <a href="/">
+          <img src={bookmark_icon} />
+        </a>
+        <img src={profile_pic} />
       </div>
     </header>
   );
