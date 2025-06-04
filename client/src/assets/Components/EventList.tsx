@@ -1,7 +1,8 @@
 import { useState } from "react"
 import EventData from "../../Type/EventEntity"
 import EventService from "../../Services/EventService";
-import EventCard from "./EventCard";
+import { EventCards } from "./EventCards";
+
 
 const EventList: React.FC = () =>{
     const[event, setEvents] = useState<Array<EventData>>([]);
@@ -16,8 +17,9 @@ const EventList: React.FC = () =>{
             <div>
                 {/* Need event component*/}
                 {event && event.map((event) =>(
-                    <EventCard eventName={event.eventEntityName}></EventCard>
+                    <></>
                 ))}
+                <EventCards></EventCards>
             </div>
         </>
     )
