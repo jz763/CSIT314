@@ -1,4 +1,4 @@
-package java.CSIT314.EventSystemV1.Enitity;
+package EventSystemV1.Enitity;
 
 import jakarta.persistence.*;
 

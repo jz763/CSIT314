@@ -1,13 +1,13 @@
-package java.CSIT314.EventSystemV1;
+package EventSystemV1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EventSystemV1Application {
+public class EventServiceV1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EventSystemV1Application.class, args);
+		SpringApplication.run(EventServiceV1Application.class, args);
 	}
 
 }

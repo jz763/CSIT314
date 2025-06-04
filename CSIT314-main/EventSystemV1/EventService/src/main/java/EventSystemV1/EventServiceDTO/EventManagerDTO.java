@@ -1,28 +1,31 @@
-package java.CSIT314.EventSystemV1.EventServiceDTO;
+package EventSystemV1.EventServiceDTO;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
-
-public class EventDTO {
+public class EventManagerDTO {
 
     //Attributes / Variables
     private String eventName;
     private Date eventDate;
     private Time eventTime;
     private String eventLocation;
+    private List<String> eventTickets;
+    private List<String> eventAttendees;
 
     //Getters
+
     public String getEventName(){
         return this.eventName;
     }
 
-    public Time getEventTime(){
-        return this.eventTime;
-    }
-
     public Date getEventDate(){
         return this.eventDate;
+    }
+
+    public Time getEventTime(){
+        return this.eventTime;
     }
 
     public String getEventLocation(){
@@ -45,5 +48,13 @@ public class EventDTO {
 
     public void setEventLocation(String eventLocation){
         this.eventLocation = eventLocation;
+    }
+
+    public void setEventTickets(List<String> eventTickets){
+        this.eventTickets = eventTickets;
+    }
+
+    public void setEventAttendees(List<String> eventAttendees){
+        this.eventAttendees = eventAttendees;
     }
 }

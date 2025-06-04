@@ -1,11 +1,13 @@
-package java.CSIT314.EventSystemV1.Controller;
+package EventSystemV1.Controller;
 
-import CSIT314.EventSystemV1.Enitity.EventServiceEntity;
-import CSIT314.EventSystemV1.Service.EventServiceService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
+import EventSystemV1.Enitity.EventServiceEntity;
+import EventSystemV1.Service.EventServiceService;
 import java.util.List;
 import java.util.Optional;
 

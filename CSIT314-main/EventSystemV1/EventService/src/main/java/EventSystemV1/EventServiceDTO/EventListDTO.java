@@ -1,7 +1,8 @@
-package java.CSIT314.EventSystemV1.EventServiceDTO;
+package EventSystemV1.EventServiceDTO;
 
-import CSIT314.EventSystemV1.Enitity.EventServiceEntity;
 
+
+import EventSystemV1.Enitity.EventServiceEntity;
 import java.util.List;
 
 public class EventListDTO {

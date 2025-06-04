@@ -1,9 +1,10 @@
-package java.CSIT314.EventSystemV1;
+package EventSystemV1;
 
-import CSIT314.EventSystemV1.Enitity.EventServiceEntity;
-import CSIT314.EventSystemV1.EventServiceDTO.EventDTO;
+
 import org.springframework.stereotype.Component;
 
+import EventSystemV1.Enitity.EventServiceEntity;
+import EventSystemV1.EventServiceDTO.EventDTO;
 import java.sql.Time;
 import java.util.Date;
 import java.util.List;
@@ -25,4 +26,9 @@ public class EventServiceMapper {
         */
         return new EventDTO();
     }
+    //Need to finalise mapper
+    public EventServiceEntity eventDTOtoEntity(EventDTO dtoEvent){
+        return new EventServiceEntity();
+    }
+
 }

@@ -1,4 +1,4 @@
-package java.CSIT314.EventSystemV1.EventServiceDTO;
+package EventSystemV1.EventServiceDTO;
 
 import java.sql.Time;
 import java.util.Date;
