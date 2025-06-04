@@ -1,3 +1,4 @@
+
 import ContactCard from "../assets/Components/Cards/ContactCard"
 import EventCard from "../assets/Components/Cards/EventCard"
 import PriceCard from "../assets/Components/Cards/PriceCard"
@@ -7,9 +8,13 @@ import concertIMG from "../../src/assets/Images/concertIMG.png";
 import "./TestPage.css"
 
 
+
+
+
 function TestPage(){
     return(
         <>
+
 
             <div className = "container event-details">
                 <div className = "row">
@@ -25,6 +30,15 @@ function TestPage(){
                     </div>
                 </div>
             </div>  
+
+
+            <div>
+                helllo
+            </div>
+            <title>
+                Hello
+            </title>
+            <EventList></EventList>
 
         </>
     )
