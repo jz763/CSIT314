@@ -1,13 +1,14 @@
+import React, { useState } from "react";
 import logo from "../Images/logo.png";
-
-
 import bookmark_icon from "../Images/bookmark-empty.png";
 import profile_pic from "../Images/Profile Pic.png";
 import loc_icon from "../Images/location-sharp.png";
 import search_icon from "../Images/search.png";
 
-import styles from "./Navbar.module.css";
 export const Navbar = () => {
+  // State to track whether the profile dropdown is visible
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
+
   return (
     <header
       className="
@@ -17,7 +18,6 @@ export const Navbar = () => {
         bg-[#1d1c1c] border border-black
         box-border
         z-1000000
-        
       "
     >
       {/* Logo on the left */}
@@ -91,25 +91,44 @@ export const Navbar = () => {
           href="/"
           className="text-white text-[24px] font-normal hover:underline"
         >
-
           About Us
         </a>
       </div>
 
-
-      <div className={styles["user_bookmark"]}>
-        <a href="/">
-          <img src={bookmark_icon} />
-        </a>
-        <img src={profile_pic} />
-      </div>
       {/* User & Bookmark on the right */}
       <div className="flex items-center justify-center">
+        {/* Bookmark icon */}
         <a href="/">
           <img src={bookmark_icon} alt="Bookmark icon" />
         </a>
-        <img src={profile_pic} alt="Profile picture" className="ml-[35px]" />
 
+        {/* Profile icon + dropdown */}
+        <div className="ml-[35px] relative">
+          {/* Clicking this button toggles the dropdown */}
+          <button
+            onClick={() => setShowProfileMenu((prev) => !prev)}
+            className="focus:outline-none"
+          >
+            <img
+              src={profile_pic}
+              alt="Profile picture"
+              className="w-[80px] h-[80px] rounded-full cursor-pointer"
+            />
+          </button>
+
+          {/* Dropdown menu */}
+          {showProfileMenu && (
+            <div className="absolute right-0 mt-2 w-[150px] bg-white rounded-lg shadow-lg z-50">
+              {/* You can replace href="/logout" with your logout handler */}
+              <a
+                href="/"
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >
+                Log Out
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
