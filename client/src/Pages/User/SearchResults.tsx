@@ -1,5 +1,3 @@
-// src/pages/SearchResults.tsx
-
 import React, { useState } from "react";
 import { Footer } from "../../assets/Components/Footer";
 import { Navbar } from "../../assets/Components/Navbar";
