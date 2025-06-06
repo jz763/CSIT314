@@ -2,9 +2,9 @@ import { Link } from "react-router";
 import { OrgNavbar } from "../../assets/Components/OrgNavbar";
 
 export const OrgSignup = () => {
-    <OrgNavbar/>
     return(
         <div className = "bg-[#1d1c1c] min-h-screen">
+            <OrgNavbar/>
             <div className = "flex h-screen justify-center items-center">
                 <form action = "/createOrganiser" className = "text-white">
                     <label htmlFor = "userName">Enter Organisation Username:</label><br/>

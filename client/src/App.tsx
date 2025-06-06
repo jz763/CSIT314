@@ -8,6 +8,7 @@ import { PaymentPage } from "./assets/Components/PaymentForm.tsx";
 import { OrgSignup } from "./Pages/Organisers/OrgSignup.tsx";
 import { OrgLogin } from "./Pages/Organisers/Login.tsx";
 import { EventCreation } from "./Pages/Organisers/EventCreation.tsx";
+import { EventManage } from "./Pages/Organisers/EventManage.tsx";
 import { NotificationPage } from "./Pages/User/NotificationList.tsx";
 import { TicketPage } from "./Pages/User/TicketPage.tsx";
 import { OrgHome } from "./Pages/Organisers/OrgHome.tsx";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/OrgSignup" element={<OrgSignup />} />
         <Route path="/OrgLogin" element={<OrgLogin />} />
         <Route path="/EventCreation" element={<EventCreation />} />
+        <Route path="/EventManage" element={<EventManage />} />
         <Route path="/Notifications" element={<NotificationPage />} />
         <Route path="/TicketPage" element={<TicketPage />} />
         <Route path="/OrgHome" element={<OrgHome />} />
