@@ -4,8 +4,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.util.List;
-
 public class EventOrganiserCommand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +13,10 @@ public class EventOrganiserCommand {
 
     private String password;
 
-    public EventOrganiserCommand() {}
+    public EventOrganiserCommand() {
+    }
 
-    public EventOrganiserCommand(String username, String Password)
-    {
+    public EventOrganiserCommand(String username, String Password) {
         this.username = username;
         this.password = Password;
     }

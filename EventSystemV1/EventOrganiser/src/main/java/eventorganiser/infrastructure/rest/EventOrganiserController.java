@@ -16,7 +16,8 @@ public class EventOrganiserController {
     private EventOrganiserQueryService eventOrganiserQueryService;
     private EventOrganiserCommandService eventOrganiserCommandService;
 
-    public EventOrganiserController(EventOrganiserQueryService eventOrganiserQueryService, EventOrganiserCommandService eventOrganiserCommand) {
+    public EventOrganiserController(EventOrganiserQueryService eventOrganiserQueryService,
+            EventOrganiserCommandService eventOrganiserCommand) {
         this.eventOrganiserQueryService = eventOrganiserQueryService;
         this.eventOrganiserCommandService = eventOrganiserCommandService;
     }
