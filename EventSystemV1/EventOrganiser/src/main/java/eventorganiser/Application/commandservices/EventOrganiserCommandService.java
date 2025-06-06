@@ -6,13 +6,15 @@ import eventorganiser.domain.model.valueobjects.EventOrganiserId;
 import eventorganiser.infrastructure.repository.EventOrganiserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Service
 public class EventOrganiserCommandService {
     private final EventOrganiserRepository eventOrganiserRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public EventOrganiserCommandService(EventOrganiserRepository eventOrganiserRepository, PasswordEncoder passwordEncoder) {
+    public EventOrganiserCommandService(EventOrganiserRepository eventOrganiserRepository,
+            PasswordEncoder passwordEncoder) {
         this.eventOrganiserRepository = eventOrganiserRepository;
         this.passwordEncoder = passwordEncoder;
     }

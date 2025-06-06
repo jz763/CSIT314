@@ -4,7 +4,7 @@ import ticket.entity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-public class TicketRepository extends JpaRepository<Ticket, Long> {
+public interface TicketRepository extends JpaRepository<Ticket, Long> {
 
     Ticket findByNotificationId(int ticketId);
 
