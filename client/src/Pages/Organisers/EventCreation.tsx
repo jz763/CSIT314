@@ -100,25 +100,33 @@ export const EventCreation: React.FC = () => {
         </div>
 
         <div className="mb-6">
-          <label className="font-bold block mb-1">Price</label>
-          <div className="space-y-2">
-            <div className="border border-gray-400 rounded-md px-2">
-              <span className="mr-1">$</span>
-              <input
-                type="number"
-                placeholder="Price"
-                className="w-20 bg-transparent outline-none"
-              />
-            </div>
-            <div className="border w-20 border-gray-400 rounded-md px-2">
-              <span className="mr-1">$</span>
-              <input
-                type="number"
-                placeholder="Price"
-                className="w-20 bg-transparent outline-none"
-              />
-            </div>
-          </div>
+            <label className="font-bold block mb-1">Price</label>
+            <table>
+                <tr>
+                    <td>Standard Price</td>
+                    <td className = "px-2">$</td>
+                    <td>
+                        <input
+                            type="number"
+                            id="basePrice"
+                            placeholder="Price"
+                            className="w-20 bg-transparent border-1 border-gray-400 rounded-md pl-2"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>VIP Price</td>
+                    <td className = "px-2">$</td>
+                    <td>
+                        <input
+                            type="number"
+                            id="vipPrice"
+                            placeholder="Price"
+                            className="w-20 bg-transparent border-1 border-gray-400 rounded-md pl-2"
+                        />
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <div className="text-center">
