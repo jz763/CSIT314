@@ -6,6 +6,7 @@ import { SearchResults } from "./Pages/User/SearchResults";
 import { Event } from "./Pages/User/Event";
 import { PaymentPage } from "./assets/Components/PaymentForm.tsx";
 import { OrgSignup } from "./Pages/Organisers/OrgSignup.tsx";
+import { OrgLogin } from "./Pages/Organisers/Login.tsx";
 import { NotificationPage } from "./Pages/User/NotificationList.tsx";
 import { TicketPage } from "./Pages/User/TicketPage.tsx";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Event" element={<Event />} />
         <Route path="/PaymentPage" element={<PaymentPage />} />
         <Route path="/OrgSignup" element={<OrgSignup />} />
+        <Route path="/OrgLogin" element={<OrgLogin />} />
         <Route path="/Notifications" element={<NotificationPage />} />
         <Route path="/TicketPage" element={<TicketPage />} />
       </Routes>
