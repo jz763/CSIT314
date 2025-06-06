@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Footer } from "../../assets/Components/Footer";
 import { Navbar } from "../../assets/Components/Navbar";
 import { EventCards } from "../../assets/Components/EventCards";
-import "./SearchResults.css";
 
 import resetsvg from "../../assets/Images/refresh-double.svg";
 
@@ -69,7 +68,7 @@ export const SearchResults = () => {
   };
 
   return (
-    <div>
+    <div className="bg-[linear-gradient(0deg,_#1d1c1c_12.69%,_#7e7c7c_42.89%,_#1d1c1c_93.59%)] min-h-screen">
       {/* Navbar */}
       <Navbar />
 

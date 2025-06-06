@@ -7,7 +7,6 @@ import "react-multi-carousel/lib/styles.css";
 import { Navbar } from "../../assets/Components/Navbar";
 
 import event_img from "../../assets/images/concertIMG.png";
-import "./HomePage.css";
 
 export const HomePage: React.FC = () => {
   const responsive = {
@@ -18,7 +17,7 @@ export const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="bg-[linear-gradient(0deg,_#1d1c1c_12.69%,_#7e7c7c_42.89%,_#1d1c1c_68.92%)] min-h-screen">
       <Carousel
         className="relative top-27"
         responsive={responsive}

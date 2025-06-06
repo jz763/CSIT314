@@ -99,7 +99,7 @@ export const Navbar = () => {
       {/* User & Bookmark on the right */}
       <div className="flex items-center justify-center">
         {/* Notification Icon */}
-        <a className="pr-[30px]" href="/Notifications">
+        <a className="pr-[35px]" href="/Notifications">
           <img src={notbell} />
         </a>
         {/* Bookmark icon */}

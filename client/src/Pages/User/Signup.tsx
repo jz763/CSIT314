@@ -7,7 +7,7 @@ import event_img from "../../assets/images/eventsBWimage.jpg";
 
 export const Signup = () => {
   return (
-    <div>
+    <div className="bg-[linear-gradient(128deg,_#dfdfdf_11.38%,_#000_87.48%)] min-h-screen ">
       <div className="text-center text-white pb-15 pt-10">
         <h1 className="text-[64px] font-bold mb-0 leading-none">Eventide</h1>
         <h2 className="text-[20px] font-normal mt-1 leading-none">
