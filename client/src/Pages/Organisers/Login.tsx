@@ -13,7 +13,7 @@ export const OrgLogin = () => {
                     <label htmlFor = "password">Enter Password:</label><br/>
                     <input type = "password" id = "password" name = "password" className = "border-1 rounded-sm"/><br/><br/>
 
-                    <input type = "Submit" value = "Register" className = "bg-neutral-300 text-black border-1 rounded-xl w-[100px] h-[40px] hover:bg-neutral-400"/>
+                    <input type = "Submit" value = "Login" className = "bg-neutral-300 text-black border-1 rounded-xl w-[100px] h-[40px] hover:bg-neutral-400"/>
                 </form>
             </div>
         </div>
