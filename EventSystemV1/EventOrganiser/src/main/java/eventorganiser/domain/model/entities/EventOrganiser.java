@@ -5,7 +5,6 @@ import eventorganiser.domain.model.valueobjects.EventOrganiserId;
 import eventorganiser.domain.model.valueobjects.Password;
 import eventorganiser.domain.model.valueobjects.Username;
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "EventOrganiser")
@@ -23,7 +22,8 @@ public class EventOrganiser {
     @Embedded
     private Password password;
 
-    public EventOrganiser() {}
+    public EventOrganiser() {
+    }
 
     public EventOrganiser(EventOrganiserCommand eventOrganiserCommand) {
         this.eventOrganiserId = new EventOrganiserId(eventOrganiserCommand.getEventOrganiserId());

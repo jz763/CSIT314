@@ -3,7 +3,6 @@ package eventorganiser.infrastructure.rest.dto;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import org.apache.logging.log4j.message.StringFormattedMessage;
 
 public class EventOrganiserResource {
     @Id
@@ -14,7 +13,8 @@ public class EventOrganiserResource {
 
     private String password;
 
-    public EventOrganiserResource() {}
+    public EventOrganiserResource() {
+    }
 
     public EventOrganiserResource(String username, String password) {
         this.username = username;

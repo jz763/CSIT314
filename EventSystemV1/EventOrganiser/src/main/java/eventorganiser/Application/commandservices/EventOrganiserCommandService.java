@@ -7,8 +7,6 @@ import eventorganiser.infrastructure.repository.EventOrganiserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.UUID;
-
 @Service
 public class EventOrganiserCommandService {
     private final EventOrganiserRepository eventOrganiserRepository;
@@ -25,7 +23,6 @@ public class EventOrganiserCommandService {
 
         return eventOrganiser.getEventOrganiserId();
     }
-
 
     @Transactional
     public void deleteEventOrganiser(EventOrganiserId eventOrganiserId) {
