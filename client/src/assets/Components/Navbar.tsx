@@ -4,6 +4,7 @@ import bookmark_icon from "../Images/bookmark-empty.png";
 import profile_pic from "../Images/Profile Pic.png";
 import loc_icon from "../Images/location-sharp.png";
 import search_icon from "../Images/search.png";
+import notbell from "../Images/notification-bell.svg";
 
 export const Navbar = () => {
   // State to track whether the profile dropdown is visible
@@ -97,6 +98,10 @@ export const Navbar = () => {
 
       {/* User & Bookmark on the right */}
       <div className="flex items-center justify-center">
+        {/* Notification Icon */}
+        <a className="pr-[30px]" href="/Notifications">
+          <img src={notbell} />
+        </a>
         {/* Bookmark icon */}
         <a href="/">
           <img src={bookmark_icon} alt="Bookmark icon" />

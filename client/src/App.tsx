@@ -6,6 +6,7 @@ import { SearchResults } from "./Pages/User/SearchResults";
 import { Event } from "./Pages/User/Event";
 import { PaymentPage } from "./assets/Components/PaymentForm.tsx";
 import { OrgSignup } from "./Pages/Organisers/OrgSignup.tsx";
+import { NotificationPage } from "./Pages/User/NotificationList.tsx";
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
         <Route path="/Event" element={<Event />} />
         <Route path="/PaymentPage" element={<PaymentPage />} />
         <Route path="/OrgSignup" element={<OrgSignup />} />
+        <Route path="/Notifications" element={<NotificationPage />} />
       </Routes>
     </Router>
-
   );
 }
 
