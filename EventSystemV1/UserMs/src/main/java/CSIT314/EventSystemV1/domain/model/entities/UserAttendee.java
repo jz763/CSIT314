@@ -7,7 +7,7 @@ import CSIT314.EventSystemV1.domain.model.valueobjects.Password;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user_attendee")
+@Table(name = "userAttendee")
 public class UserAttendee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
