@@ -10,6 +10,7 @@ import { OrgLogin } from "./Pages/Organisers/Login.tsx";
 import { EventCreation } from "./Pages/Organisers/EventCreation.tsx";
 import { NotificationPage } from "./Pages/User/NotificationList.tsx";
 import { TicketPage } from "./Pages/User/TicketPage.tsx";
+import { OrgHome } from "./Pages/Organisers/OrgHome.tsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/EventCreation" element={<EventCreation />} />
         <Route path="/Notifications" element={<NotificationPage />} />
         <Route path="/TicketPage" element={<TicketPage />} />
+        <Route path="/OrgHome" element={<OrgHome />} />
       </Routes>
     </Router>
   );
