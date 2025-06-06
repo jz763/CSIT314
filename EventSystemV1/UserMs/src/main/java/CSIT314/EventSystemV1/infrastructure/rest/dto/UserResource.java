@@ -11,22 +11,15 @@ public class UserResource {
 
     private String username;
 
-    private String password;
+    public UserResource() {}
 
-    public UserResource() {
-    }
-
-    public UserResource(String username, String password) {
+    public UserResource(String username) {
         this.username = username;
-        this.password = password;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public String getPassword() {
-        return password;
-    }
 
 }
