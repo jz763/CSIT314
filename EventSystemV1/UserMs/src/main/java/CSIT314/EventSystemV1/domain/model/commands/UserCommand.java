@@ -11,18 +11,25 @@ public class UserCommand {
 
     private String username;
 
-    public UserCommand() {}
+    private String password;
 
-    public UserCommand(String username) {
-        this.username = username;
+    public UserCommand() {
     }
 
-    public String getUserId()
-    {
+    public UserCommand(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUserId() {
         return userId;
     }
 
     public String getUsername() {
         return username;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
