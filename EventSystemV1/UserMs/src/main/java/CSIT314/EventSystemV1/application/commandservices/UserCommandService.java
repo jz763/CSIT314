@@ -15,13 +15,19 @@ import java.lang.IllegalArgumentException;
 public class UserCommandService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserCommandService(UserRepository userRepository) {
+    public UserCommandService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Transactional
     public UserId registerUser(UserCommand userCommand) {
+        String encodedPassword = passwordEncoder.encode(userCommand.getPassword());
+
+        userCommand.setPassword(encodedPassword);
+        
         UserAttendee user = new UserAttendee(userCommand);
 
         userRepository.save(user);

@@ -10,13 +10,19 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class EventOrganiserCommandService {
     private final EventOrganiserRepository eventOrganiserRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public EventOrganiserCommandService(EventOrganiserRepository eventOrganiserRepository) {
+    public EventOrganiserCommandService(EventOrganiserRepository eventOrganiserRepository, PasswordEncoder passwordEncoder) {
         this.eventOrganiserRepository = eventOrganiserRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Transactional
     public EventOrganiserId registerEventOrganiser(EventOrganiserCommand eventOrganiserCommand) {
+        String encodedPassword = passwordEncoder.encode(eventOrganiserCommand.getPassword());
+
+        eventOrganiserCommand.setPassword(encodedPassword);
+
         EventOrganiser eventOrganiser = new EventOrganiser(eventOrganiserCommand);
 
         eventOrganiserRepository.save(eventOrganiser);
