@@ -3,8 +3,6 @@ import { Footer } from "../../assets/Components/Footer";
 import { Navbar } from "../../assets/Components/Navbar";
 import { NotificationCard } from "../../assets/Components/NotificationCard";
 
-import "./HomePage.css";
-
 export const NotificationPage = () => {
   return (
     <div className="relative bg-black min-h-screen">
